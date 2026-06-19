@@ -241,3 +241,8 @@ footer {
   font-size: 13px;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
+/* --- MOBILE MENU BODY LOCK --- */
+body.menu-open {
+  overflow: hidden;
+}

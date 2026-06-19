@@ -6,11 +6,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("STU Multi-Page Application Core Nodes Active.");
 
-  // Automatic Menu State Reset Handler on Window Scaling
   const menuCheckbox = document.getElementById("menu-toggle-checkbox");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  // Dynamic Active Navigation Handler
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href").split("/").pop();
+
+    if (linkPath === currentPath) {
+      link.classList.add("active-nav");
+    }
+
+    link.addEventListener("click", () => {
+      if (menuCheckbox && menuCheckbox.checked) {
+        menuCheckbox.checked = false;
+        document.body.classList.remove("menu-open");
+      }
+    });
+  });
+
+  // Mobile Menu Body Lock Handler
+  if (menuCheckbox) {
+    menuCheckbox.addEventListener("change", () => {
+      document.body.classList.toggle("menu-open", menuCheckbox.checked);
+    });
+  }
+
+  // Automatic Menu State Reset Handler on Window Scaling
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1024 && menuCheckbox && menuCheckbox.checked) {
       menuCheckbox.checked = false;
+      document.body.classList.remove("menu-open");
     }
   });
 
@@ -19,9 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (asyncForm) {
     asyncForm.addEventListener("submit", (e) => {
       e.preventDefault();
+
       const actionBtn = asyncForm.querySelector("button");
+
       if (actionBtn) {
         const originalText = actionBtn.textContent;
+
         actionBtn.textContent = "TRANSMITTING TO BUREAU...";
         actionBtn.style.opacity = "0.7";
         actionBtn.style.pointerEvents = "none";
