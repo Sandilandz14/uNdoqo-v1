@@ -4,11 +4,15 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | STU</title>
+  <!-- Step 6 Paths and Reusable Layout Styles Linked -->
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="../index.html" class="brand"><img src="../assets/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
+    <a href="../index.html" class="brand">
+      <img src="../assets/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+    </a>
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
     <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
@@ -21,21 +25,31 @@
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
+
+  <!-- ISSUE 3: SHARED PAGE HERO PARADIGM -->
+  <section class="page-hero">
+    <p class="hero-kicker">About Us</p>
+    <h1>THE GUARDIANS OF ESSENCE</h1>
+  </section>
+
   <main class="section-pad">
-    <p class="hero-kicker" style="color:var(--turquoise);">Who We Are / What We Do</p>
-    <h2 class="section-title">THE METADATA FRAMEWORK</h2>
-    <div style="margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
-      <article class="info-card dark-card">
-        <h3>SPHERES OF SYSTEMIC ACTION</h3>
-        <p style="margin-bottom:15px;"><strong>❖ LANGUAGE:</strong> Morphosyntactic stabilization of ancestral roots[cite: 11, 12].</p>
-        <p style="margin-bottom:15px;"><strong>❖ HISTORY:</strong> Active deconstruction of colonial erasures[cite: 11, 12].</p>
-        <p><strong>❖ GOVERNANCE:</strong> Application of traditional council metrics into civic spaces[cite: 11, 12].</p>
+    <!-- THE BIGGEST ISSUE FIX: NO MORE BREAKING INLINE GRIDS -->
+    <div class="subpage-split-layout">
+      <article class="subpage-accent-card">
+        <h3>SPHERES OF ACTION</h3>
+        <p><strong>❖ Core Principles:</strong> Love your culture, own your essence, and protect the trinity system.</p>
+        <p><strong>❖ Founder Narrative:</strong> Developed under the vision of Sandile waMadzikane.</p>
+        <p><strong>❖ Vision Framework:</strong> Total structural recovery of historical configurations safely.</p>
       </article>
-      <div style="font-family:var(--font-serif); font-size:20px; line-height:1.6; color:#334155;">
-        <p>Operating as an elite think tank, the platform configures robust oral methodologies to reconstruct lost historical sequences without seeking external institutional verification[cite: 11, 12].</p>
+      
+      <div class="subpage-narrative-block">
+        <p>Sandile Tukani University functions as a highly non-traditional institute mapping oral lineages and toponymy profiles to build a clear blueprint for indigenous self-sufficiency.</p>
       </div>
     </div>
   </main>
-  <footer><p>Sandile Tukani University © 2026</p></footer>
+
+  <footer>
+    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+  </footer>
 </body>
 </html>

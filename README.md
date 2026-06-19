@@ -93,3 +93,21 @@ Payment integration
 Admin dashboard
 
 Those are the natural next phases for the uNdoqo platform.
+
+================================
+
+Commit This Refactor
+git add .
+git commit -m "Refactor site into multi-page architecture"
+git push origin uNdoqo-Phase-1
+
+After this, the next milestone is turning the static pages into a proper web application by adding:
+
+Course enrollment forms
+Consultation booking forms
+Media gallery with embedded YouTube/TikTok
+Bookstore catalog
+PostgreSQL-ready data structure
+Admin dashboard
+
+Those will move the project from a website into the first version of the actual uNdoqo platform.

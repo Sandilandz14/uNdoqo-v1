@@ -1,0 +1,50 @@
+/* ==========================================================================
+   css/courses.css - STYLING SCALES FOR TRACK CARD MATRICES & PRICING
+   ========================================================================== */
+
+.course-grid-full {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.course-detailed-card {
+  background: var(--white);
+  padding: 48px;
+  border-radius: 8px;
+  border-left: 4px solid var(--turquoise);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.course-title-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--dark-prime);
+  margin-bottom: 12px;
+}
+
+.course-desc {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.course-pricing-tag {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--dark-prime);
+  text-transform: uppercase;
+}
+
+.dark-card-override {
+  background: var(--dark-surface);
+  color: var(--white);
+  border-left-color: var(--turquoise);
+}
+
+.dark-card-override .course-title-main { color: var(--white); }
+.dark-card-override .course-desc { color: var(--text-muted); }
+.dark-card-override .course-pricing-tag { color: var(--turquoise); }

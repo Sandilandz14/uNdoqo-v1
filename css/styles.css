@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SANDILE TUKANI UNIVERSITY (STU) - GLOBAL CORE STYLES & ARCHITECTURE
+   css/styles.css - GLOBAL ARCHITECTURE & SYSTEM TOKENS
    ========================================================================== */
 
 :root {
@@ -39,7 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- UNIVERSAL APP NAVBAR WITH MOBILITY RESPONSIVENESS --- */
+/* --- THE NAVBAR ENGINE --- */
 .navbar {
   position: sticky;
   top: 0;
@@ -65,34 +65,6 @@ body {
   height: 60px;
   width: auto;
   object-fit: contain;
-  transition: var(--transition-smooth);
-}
-
-.logo-image:hover {
-  transform: scale(1.03);
-}
-
-/* Responsive Hamburger Mechanism */
-.menu-toggle {
-  display: none;
-}
-
-.hamburger-label {
-  display: none;
-  cursor: pointer;
-  z-index: 110;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px;
-}
-
-.hamburger-label span {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: var(--transition-smooth);
 }
 
 .nav-links {
@@ -132,6 +104,17 @@ body {
   width: 100%;
 }
 
+/* --- ACTIVE NAVIGATION SPECIFICATION --- */
+.nav-links a.active-nav {
+  color: var(--turquoise);
+  font-weight: 800;
+}
+
+.nav-links a.active-nav::after {
+  width: 100%;
+  background: var(--turquoise);
+}
+
 .donate-btn {
   background: var(--turquoise);
   color: var(--dark-prime);
@@ -152,105 +135,31 @@ body {
   box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
 }
 
-/* --- PREVIEW AND SUBPAGE STRUCTURAL MODULES --- */
-.section-pad {
-  padding: clamp(60px, 8vw, 120px) var(--site-pad);
+/* --- STEP 8: HAMBURGER INTERACTIVE STRUCTURAL BLOCK --- */
+.menu-toggle {
+  display: none;
 }
 
-.hero-kicker, .section-kicker, .center-kicker {
-  color: var(--turquoise);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.center-kicker { text-align: center; }
-
-.section-title {
-  font-size: clamp(36px, 4vw, 56px);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1.1;
-  margin-top: 10px;
-}
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.preview-card {
-  background: var(--white);
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-  display: flex;
+.hamburger-label {
+  display: none;
+  cursor: pointer;
+  z-index: 110;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 6px;
+  padding: 10px;
+}
+
+.hamburger-label span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
   transition: var(--transition-smooth);
 }
 
-.preview-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-}
-
-.preview-card h3 {
-  font-size: 22px;
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: var(--dark-prime);
-}
-
-.preview-card p {
-  color: #475569;
-  font-size: 15px;
-  margin-bottom: 24px;
-  flex-grow: 1;
-}
-
-.preview-link {
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: var(--turquoise);
-  text-transform: uppercase;
-  align-self: flex-start;
-}
-
-.dark-block {
-  background: var(--dark-prime);
-  color: var(--white);
-}
-
-/* --- FOOTER ATOM --- */
-footer {
-  background: var(--dark-prime);
-  color: var(--text-muted);
-  text-align: center;
-  padding: 40px var(--site-pad);
-  font-size: 13px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-/* ==========================================================================
-   MOBILE INTERACTION SPECIFICATION (HAMBURGER VIEWPORTS)
-   ========================================================================== */
-
 @media (max-width: 1024px) {
-  .hamburger-label {
-    display: flex;
-  }
-
+  .hamburger-label { display: flex; }
   .nav-links {
     position: fixed;
     top: 0;
@@ -268,31 +177,67 @@ footer {
     transition: var(--transition-smooth);
     box-shadow: -10px 0 30px rgba(0,0,0,0.2);
   }
-
-  .nav-links a {
-    font-size: 18px;
-  }
-
-  /* Checked Trigger State Mechanism using pure CSS from image_1d06a3.png schema */
-  .menu-toggle:checked ~ .nav-links {
-    right: 0;
-  }
-
-  .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -7px);
-  }
+  .nav-links a { font-size: 18px; }
+  .menu-toggle:checked ~ .nav-links { right: 0; }
+  .menu-toggle:checked ~ .hamburger-label span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+  .menu-toggle:checked ~ .hamburger-label span:nth-child(2) { opacity: 0; }
+  .menu-toggle:checked ~ .hamburger-label span:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+  .donate-btn { display: none; }
 }
 
-@media (max-width: 640px) {
-  .donate-btn {
-    display: none; /* Optimized layout preservation for small widths */
-  }
+/* --- GLOBAL BUTTONS & UTILITY STRUCTURAL SHARDS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 36px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary { background: var(--turquoise); color: var(--dark-prime); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 184, 166, 0.3); }
+.btn-outline { border: 1px solid rgba(255,255,255,0.25); color: var(--white); }
+.btn-outline:hover { background: rgba(255,255,255,0.05); }
+
+.section-pad { padding: clamp(60px, 8vw, 120px) var(--site-pad); }
+.hero-kicker, .section-kicker, .center-kicker {
+  color: var(--turquoise);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+.center-kicker { text-align: center; }
+.dark-block { background: var(--dark-prime); color: var(--white); }
+
+/* --- REUSABLE PREVIEW GRIDS --- */
+.preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.preview-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+.preview-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+
+/* --- GLOBAL FOOTER --- */
+footer {
+  background: var(--dark-prime);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 40px var(--site-pad);
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }

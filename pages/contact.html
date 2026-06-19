@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Secure Contact Pipeline | STU</title>
   <link rel="stylesheet" href="../css/styles.css" />
-  <style>
-    .contact-container { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; margin-top: 40px; }
-    @media(max-width:1024px) { .contact-container { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="../css/pages.css" />
 </head>
 <body class="dark-block">
-  <nav class="navbar">
-    <a href="../index.html" class="brand"><img src="../assets/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="brand">
+      <img src="../assets/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+    </a>
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
     <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
@@ -25,29 +24,46 @@
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
+
+  <section class="page-hero">
+    <p class="hero-kicker">System Engagement Protocols</p>
+    <h1 class="white-title">Contact Framework</h1>
+  </section>
+
   <main class="section-pad">
-    <div class="contact-container">
+    <div class="subpage-split-layout">
       <div>
-        <p class="hero-kicker">uNdoqo Sanctuary Pipeline</p>
-        <h2 class="section-title white-title">TRANSMIT PARAMS</h2>
-        <p style="font-family:var(--font-serif); color:var(--text-muted); margin-top:20px; font-style:italic;">
-          "Reclaiming memory. Restoring identity. Reawakening indigenous knowledge."[cite: 11, 12]
-        </p>
-        <p style="color:var(--turquoise); margin-top:15px; font-weight:700;">Direct: stukani100@gmail.com</p>
+        <h2 class="contact-heading">Office of the Indigenous Knowledge Bureau</h2>
+        <p class="contact-copy">To initiate academic partnerships, customary advisory briefs, or media alignment, register your baseline details through the verified pipeline.</p>
+        <p class="contact-email">Direct Link Pipeline: stukani100@gmail.com</p>
       </div>
-      <form style="display:flex; flex-direction:column; background:var(--dark-surface); padding:30px; border-radius:6px;">
-        <input type="text" placeholder="Full Professional Name" required style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" />
-        <input type="email" placeholder="Institutional Email Address" required style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" />
-        <select style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" required>
-          <option value="" disabled selected>Select Inquiry Domain</option>
-          <option value="course">Course Tracker Registry[cite: 11, 12]</option>
-          <option value="consult">Executive Consultation Brief[cite: 11, 12]</option>
+
+      <form class="contact-form-panel">
+        <input type="text" placeholder="Full Professional Name" required />
+        <input type="email" placeholder="Institutional Email Address" required />
+        
+        <select required>
+          <option value="" disabled selected>Select Inquiry Parameters</option>
+          <option value="course">Course &amp; Research Initiative Registration</option>
+          <option value="advisory">Post-Graduate Academic Consultation</option>
+          <option value="royal">Sovereign Royal Customary Advisory</option>
+          <option value="keynote">Keynote / Lecture Engagement Brief</option>
         </select>
-        <textarea placeholder="Outline inquiry parameters..." style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white); min-height:120px;"></textarea>
-        <button type="submit" style="background:var(--turquoise); color:var(--dark-prime); padding:16px; font-weight:800; border:none; border-radius:4px; cursor:pointer; letter-spacing:1px; text-transform:uppercase;">TRANSMIT BRIEF</button>
+        
+        <textarea placeholder="Outline your parameters clearly..."></textarea>
+        
+        <div class="contact-actions">
+          <button type="submit" class="btn btn-primary">Transmit Brief</button>
+          <a href="https://wa.me/27123456789" class="whatsapp-button-link" target="_blank" rel="noopener">WhatsApp Pipeline</a>
+        </div>
       </form>
     </div>
   </main>
-  <footer><p>Sandile Tukani University © 2026</p></footer>
+
+  <footer>
+    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+  </footer>
+  
+  <script src="../js/main.js"></script>
 </body>
 </html>

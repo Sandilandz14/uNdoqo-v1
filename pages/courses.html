@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Courses & Initiatives | STU</title>
+  <title>Courses &amp; Initiatives | STU</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
   <link rel="stylesheet" href="../css/courses.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="brand"><img src="../assets/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="brand">
+      <img src="../assets/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+    </a>
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
     <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
@@ -22,27 +25,56 @@
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
+
+  <section class="page-hero">
+    <p class="hero-kicker">Core Portfolios</p>
+    <h1>Active Tracks &amp; Enrollment</h1>
+  </section>
+
   <main class="section-pad">
-    <p class="hero-kicker" style="color:var(--turquoise);">Core Curricula Tracks</p>
-    <h2 class="section-title" style="margin-bottom:40px;">ACADEMIC TRACKS & INITIATIVES</h2>
-    <div class="preview-grid" style="grid-template-columns:1fr; gap:30px;">
-      <article class="preview-card" style="border-left:4px solid var(--turquoise);">
-        <h3>PROJECT ||EI!NASI (Course & Research Initiative)</h3>
-        <p>A structured program decoding root click sequences and tracing mapping coords across continuous Khwe-!Kwi-Tuu lines[cite: 11, 12].</p>
-        <span style="font-weight:800; color:var(--dark-prime);">REGISTRY PARAMS: R300 PER MONTH[cite: 11, 12]</span>
+    <div class="course-grid-full">
+      <article class="course-detailed-card">
+        <h3 class="course-title-main">PROJECT ||EI!NASI (Course &amp; Research Initiative)</h3>
+        <p class="course-desc">
+          Phonetic documentation, lexical expansion, and mapping of deeply endangered
+          Khwe-!Kwi-Tuu and ancient multi-ethnic linguistic strains. Operates concurrently
+          as an academic course and primary research track.
+        </p>
+        <div class="course-meta-box">
+          <span class="course-pricing-tag">Registry: R300 per month</span>
+          <a href="contact.html" class="btn btn-primary">Enroll in Track</a>
+        </div>
       </article>
-      <article class="preview-card" style="border-left:4px solid var(--turquoise);">
-        <h3>PROJECT !KORA KOBAB-ADA (Course & Research Initiative)</h3>
-        <p>Curriculum-based syntax keys and customized tutorials explicitly engineered for the functional resurrection of the !Kora cultural matrix[cite: 11, 12].</p>
-        <span style="font-weight:800; color:var(--dark-prime);">REGISTRY PARAMS: R400 PER MONTH / R2200 ONCE OFF[cite: 11, 12]</span>
+
+      <article class="course-detailed-card">
+        <h3 class="course-title-main">PROJECT !KORA KOBAB-ADA (Course &amp; Research Initiative)</h3>
+        <p class="course-desc">
+          Linguistic research initiative and core academic course focusing on the structural
+          revival of the !Kora language and cultural matrix. Delivers curriculum-based
+          modules and standardized orthographies.
+        </p>
+        <div class="course-meta-box">
+          <span class="course-pricing-tag">Registry: R400 per month / R2200 once off</span>
+          <a href="contact.html" class="btn btn-primary">Enroll in Track</a>
+        </div>
       </article>
-      <article class="preview-card" style="background:var(--dark-surface); color:var(--white);">
-        <h3 style="color:var(--turquoise)">KWAXHOSA ZIBENZA ZIBUTYA (Course & Research Initiative)</h3>
-        <p style="color:var(--text-muted)">Investigating the mathematical, philosophical, and structural economic architectures of the Xhosa civilization with zero borrowed vocabulary layers[cite: 11, 12].</p>
-        <span style="font-weight:800; color:var(--turquoise);">REGISTRY PARAMS: R400 PER MONTH / R2200 ONCE OFF[cite: 11, 12]</span>
+
+      <article class="course-detailed-card dark-card-override">
+        <h3 class="course-title-main">KWAXHOSA ZIBENZA ZIBUTYA (Course &amp; Research Initiative)</h3>
+        <p class="course-desc">
+          Advanced conceptual track investigating the socio-economic, political, and
+          philosophical architecture of the Xhosa polity with zero borrowed vocabulary layers.
+        </p>
+        <div class="course-meta-box">
+          <span class="course-pricing-tag">Registry: R400 per month / R2200 once off</span>
+          <a href="contact.html" class="btn btn-primary">Enroll in Track</a>
+        </div>
       </article>
     </div>
   </main>
-  <footer><p>Sandile Tukani University © 2026</p></footer>
+
+  <footer>
+    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+  </footer>
 </body>
 </html>

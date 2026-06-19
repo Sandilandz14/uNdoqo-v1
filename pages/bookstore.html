@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bookstore Repository | STU</title>
+  <title>The Bookstore Repository | STU</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="brand"><img src="../assets/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="brand">
+      <img src="../assets/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+    </a>
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
     <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
@@ -21,14 +24,27 @@
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
-  <main class="section-pad" style="text-align:center; min-height:75vh;">
-    <div style="font-size:48px; color:var(--turquoise); margin-bottom:20px;">❖</div>
-    <h2 class="section-title">THE BOOKSTORE REPOSITORY</h2>
-    <p style="max-width:600px; margin:20px auto; font-family:var(--font-serif); font-size:20px; color:#475569;">
-      Secure authentic dictionaries, missing historical chronicles, and certified toponymic guides compiled by indigenous specialists[cite: 11, 12].
-    </p>
-    <button style="background:var(--dark-prime); color:var(--white); padding:16px 36px; border:none; border-radius:4px; font-weight:700; cursor:pointer; margin-top:20px;">ENTER ARTIFACT CATALOGUE</button>
+
+  <section class="page-hero">
+    <p class="hero-kicker">Knowledge Repository</p>
+    <h1>The Bookstore</h1>
+  </section>
+
+  <main class="section-pad">
+    <div class="subpage-split-layout">
+      <div class="subpage-narrative-block">
+        <p>A centralized hub preserving specialized linguistic materials, ancestral dictionaries, historical monographs, and reference works compiled by multiple indigenous authors.</p>
+      </div>
+      <article class="subpage-accent-card">
+        <h3>LITERARY PROJECTS</h3>
+        <p>The collection features core indigenous tracking reference materials, toponymic text logs, and books focused on correcting systemic historical erasures.</p>
+        <button class="btn btn-primary full-width-action">Browse Repository Catalogue</button>
+      </article>
+    </div>
   </main>
-  <footer><p>Sandile Tukani University © 2026</p></footer>
+
+  <footer>
+    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+  </footer>
 </body>
 </html>

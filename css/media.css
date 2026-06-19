@@ -1,0 +1,40 @@
+/* ==========================================================================
+   css/media.css - METRICS AND ADJACENT MEDIA SECTION WRAPPERS
+   ========================================================================== */
+
+.media-intro-wrapper {
+  margin-bottom: 60px;
+}
+
+.media-white-text {
+  color: var(--soft-white);
+}
+
+.media-stat-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.stat-item-box {
+  background: var(--dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 48px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-metric {
+  font-size: 36px;
+  color: var(--turquoise);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
