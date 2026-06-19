@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Intercept Simulation Layer for Contact Templates
   const asyncForm = document.querySelector("form");
+
   if (asyncForm) {
     asyncForm.addEventListener("submit", (e) => {
       e.preventDefault();
