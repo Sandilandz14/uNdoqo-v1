@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Contact Pipeline | STU</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .contact-container { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; margin-top: 40px; }
+    @media(max-width:1024px) { .contact-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="dark-block">
+  <nav class="navbar">
+    <a href="../index.html" class="brand"><img src="../assets/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
+    <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="courses.html">COURSES</a></li>
+      <li><a href="consultations.html">CONSULTATIONS</a></li>
+      <li><a href="media.html">MEDIA</a></li>
+      <li><a href="bookstore.html">BOOKSTORE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <main class="section-pad">
+    <div class="contact-container">
+      <div>
+        <p class="hero-kicker">uNdoqo Sanctuary Pipeline</p>
+        <h2 class="section-title white-title">TRANSMIT PARAMS</h2>
+        <p style="font-family:var(--font-serif); color:var(--text-muted); margin-top:20px; font-style:italic;">
+          "Reclaiming memory. Restoring identity. Reawakening indigenous knowledge."[cite: 11, 12]
+        </p>
+        <p style="color:var(--turquoise); margin-top:15px; font-weight:700;">Direct: stukani100@gmail.com</p>
+      </div>
+      <form style="display:flex; flex-direction:column; background:var(--dark-surface); padding:30px; border-radius:6px;">
+        <input type="text" placeholder="Full Professional Name" required style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" />
+        <input type="email" placeholder="Institutional Email Address" required style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" />
+        <select style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white);" required>
+          <option value="" disabled selected>Select Inquiry Domain</option>
+          <option value="course">Course Tracker Registry[cite: 11, 12]</option>
+          <option value="consult">Executive Consultation Brief[cite: 11, 12]</option>
+        </select>
+        <textarea placeholder="Outline inquiry parameters..." style="background:var(--dark-elevated); border:1px solid rgba(255,255,255,0.05); padding:16px; margin-bottom:15px; color:var(--white); min-height:120px;"></textarea>
+        <button type="submit" style="background:var(--turquoise); color:var(--dark-prime); padding:16px; font-weight:800; border:none; border-radius:4px; cursor:pointer; letter-spacing:1px; text-transform:uppercase;">TRANSMIT BRIEF</button>
+      </form>
+    </div>
+  </main>
+  <footer><p>Sandile Tukani University © 2026</p></footer>
+</body>
+</html>

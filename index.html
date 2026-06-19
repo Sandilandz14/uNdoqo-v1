@@ -5,31 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>uNdoqo Sanctuary | Sandile Tukani University (STU)</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 
 <body>
   <!-- HEADER ARCHITECTURE -->
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="#home" class="brand" aria-label="STU Home">
+    <a href="index.html" class="brand" aria-label="STU Home">
       <img src="assets/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
     </a>
 
+    <!-- Responsive Invisible Checkbox Trigger Layer -->
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
+    <label for="menu-toggle-checkbox" class="hamburger-label" aria-label="Toggle Navigation Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
     <ul class="nav-links">
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT US</a></li>
-      <li><a href="#courses">COURSES</a></li>
-      <li><a href="#consultations">CONSULTATIONS</a></li>
-      <li><a href="#media">MEDIA</a></li>
-      <li><a href="#bookstore">BOOKSTORE</a></li>
-      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="pages/about.html">ABOUT US</a></li>
+      <li><a href="pages/courses.html">COURSES</a></li>
+      <li><a href="pages/consultations.html">CONSULTATIONS</a></li>
+      <li><a href="pages/media.html">MEDIA</a></li>
+      <li><a href="pages/bookstore.html">BOOKSTORE</a></li>
+      <li><a href="pages/contact.html">CONTACT</a></li>
     </ul>
 
-    <a href="#contact" class="donate-btn">Partner With Us</a>
+    <a href="pages/contact.html" class="donate-btn">Partner With Us</a>
   </nav>
 
-  <!-- HERO BILLBOARD -->
+  <!-- HERO BILLBOARD CONTAINER -->
   <header id="home" class="hero-header">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/hero_fallback.jpg">
+    <video class="hero-video" autoplay muted loop playsinline>
       <source src="assets/tree_sun_rays_move.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
@@ -40,17 +49,17 @@
       <p class="hero-subtitle">Reclaim the past. Correct the present. Advance the future.</p>
 
       <div class="hero-actions">
-        <a href="#courses" class="btn btn-primary">Explore Core Track Profiles</a>
-        <a href="#consultations" class="btn btn-outline">Secure Executive Consultation</a>
+        <a href="pages/courses.html" class="btn btn-primary">Explore Active Tracks</a>
+        <a href="pages/consultations.html" class="btn btn-outline">Book Consultation Briefing</a>
       </div>
     </section>
   </header>
 
   <main>
-    <!-- CHAPTER 1: POSITIONING MATRIX -->
+    <!-- MAIN PREVIEW BLOCK: POSITIONING MATRIX -->
     <section id="about" class="about-section section-pad">
       <div class="about-copy">
-        <p class="section-kicker">Epistemic Clearinghouse / Framework</p>
+        <p class="section-kicker">Epistemic Clearinghouse Framework</p>
         <h2>THE GUARDIANS<br />OF CIVILISATIONAL MEMORY</h2>
         <p class="about-lead">
           We operate as an autonomous indigenous institutional ecosystem dedicated to reversing erasure and restoring baseline psychocultural parameters[cite: 11, 12].
@@ -62,203 +71,44 @@
 
       <div class="about-cards">
         <article class="info-card light-card">
-          <h3>THE METHODOLOGICAL TRINITY</h3>
-          <ul>
-            <li>RECLAIM UNADULTERATED MEMORY</li>
-            <li>CORRECT SYSTEMIC LINGUISTIC ERASURE</li>
-            <li>ADVANCE MULTI-ETHNIC POLITIES</li>
-          </ul>
-        </article>
-
-        <article class="info-card dark-card">
-          <h3>DOMAINS OF OPERATION</h3>
-          <ul>
-            <li>ONOMASTICS: TOPONYMY REDRESS</li>
-            <li>LANGUAGE: KHWE-!KWI-TUU STABILISATION</li>
-            <li>GOVERNANCE: INKUNDLA MATRIX ADVISORY</li>
-            <li>PSYCHOLOGY: INDIGENOUS MOTHERHOOD ANALYSIS</li>
-          </ul>
+          <h3 style="color: var(--dark-prime); font-weight:800; letter-spacing:2px; margin-bottom:15px;">THE METHODOLOGICAL TRINITY</h3>
+          <p style="font-family:var(--font-serif); font-size:18px; font-weight:bold; margin-bottom:10px;">❖ Reclaim Unadulterated Memory</p>
+          <p style="font-family:var(--font-serif); font-size:18px; font-weight:bold; margin-bottom:10px;">❖ Correct Systemic Linguistic Erasure</p>
+          <p style="font-family:var(--font-serif); font-size:18px; font-weight:bold;">❖ Advance Multi-Ethnic Polities</p>
         </article>
       </div>
     </section>
 
-    <!-- CHAPTER 2: COURSE & INITIATIVE CHANNELS -->
-    <section id="courses" class="course-feature section-pad">
-      <p class="center-kicker muted">Active Curricula & Academic Tracks</p>
-      <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">COURSES & INITIATIVES</h2>
+    <!-- HUB MODULES PREVIEW PANELS -->
+    <section class="preview-section section-pad dark-block">
+      <p class="center-kicker">SANCTUARY DEPLOYMENT HUB</p>
+      <h2 class="section-title" style="text-align: center; color: var(--white);">EXPLORE THE DECOLONIAL PLATFORM</h2>
 
-      <div class="split-section">
-        <div>
-          <p class="section-kicker">Core Portfolio Track One</p>
-          <h2>PROJECT ||EI!NASI</h2>
-          <p class="large-copy">
-            A combined academic course and research initiative mapping root click phonemes within endangered Khwe-!Kwi-Tuu dialects to capture accurate coordinates[cite: 11, 12].
-          </p>
-          <a href="#contact" class="dark-button-action">JOIN CORE REGISTRY • R300 P.M</a>
-        </div>
-
-        <div class="statement-panel">
-          <h3>CONTINUITY.</h3>
-        </div>
-      </div>
-
-      <div class="course-grid">
-        <article class="course-card">
-          <div>
-            <p class="section-kicker">Core Portfolio Track Two</p>
-            <h3>!KORA KOBAB A-DA</h3>
-            <p>A specialized recovery course and linguistic research initiative establishing standardized orthographies and society laws for the active resurrection of the !Kora matrix[cite: 11, 12].</p>
-          </div>
-          <div class="course-actions">
-            <a href="#contact" class="btn btn-primary full-btn">ENROLL IN COURSE • R400 P.M</a>
-            <a href="#contact" class="btn line-button full-btn">R2200 SINGLE DISBURSEMENT</a>
-          </div>
+      <div class="preview-grid">
+        <article class="preview-card">
+          <h3>Portfolio Tracks</h3>
+          <p>Structured academic courses and active field-research initiatives including Project ||Ei!nasi, !Kora kobab-ada, and KwaXhosa Zibenza Zibutya[cite: 11, 12].</p>
+          <a href="pages/courses.html" class="preview-link">View Courses →</a>
         </article>
 
-        <article class="course-card dark">
-          <div>
-            <p class="section-kicker">Core Portfolio Track Three</p>
-            <h3>KWAXHOSA ZIBENZA ZIBUTYA</h3>
-            <p>An advanced conceptual course and socio-economic research initiative investigating the philosophical, agricultural, and mathematical layout of the Xhosa civilization[cite: 11, 12].</p>
-          </div>
-          <div class="course-actions">
-            <a href="#contact" class="btn btn-primary full-btn">ENROLL IN COURSE • R400 P.M</a>
-            <a href="#contact" class="btn line-button inverted full-btn">R2200 SINGLE DISBURSEMENT</a>
-          </div>
+        <article class="preview-card">
+          <h3>Expert Advisories</h3>
+          <p>Custom strategic consultations engineered for post-graduate research tracks, sovereign traditional royal houses, and legal heritage trusts[cite: 11, 12].</p>
+          <a href="pages/consultations.html" class="preview-link">Book Briefing →</a>
+        </article>
+
+        <article class="preview-card">
+          <h3>Media Ecosystem</h3>
+          <p>Cinematic documentary assets and micro-learning modules processing high-fidelity insights across short and long-form algorithmic channels[cite: 11, 12].</p>
+          <a href="pages/media.html" class="preview-link">Access Archives →</a>
         </article>
       </div>
-    </section>
-
-    <!-- CHAPTER 3: EXECUTIVE CONSULTATION PORTFOLIOS -->
-    <section id="consultations" class="consult-section section-pad">
-      <p class="center-kicker">Strategic Consultative Portfolios</p>
-      <h2 class="section-title" style="text-align: center;">EXECUTIVE CAPABILITY MATRIX</h2>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <h3>POST-GRADUATE ADVISORY</h3>
-          <p>Decolonial research guidance across Masters and PhD levels specializing in Xhosa motherhood models, indigenous psychology, and customary governance frameworks[cite: 11, 12].</p>
-          <h4>R350 <span>/ 2HR ADVISORY BLOCK</span></h4>
-          <a href="#contact">RESERVE ACADEMIC BRIEFING</a>
-        </article>
-
-        <article class="service-card">
-          <h3>ONOMASTICS & RE-NAMING</h3>
-          <p>High-level professional consultative reports mapping geographical renaming policies (toponymy) and family lineage records[cite: 11, 12].</p>
-          <h4>R350 <span>/ 2HR SESSION</span></h4>
-          <a href="#contact">RESERVE ONOMASTICS SESSION</a>
-        </article>
-
-        <article class="service-card dark-service">
-          <h3>ROYAL LINEAGE ADVISORY</h3>
-          <p>Contextual family history curation, dynamic statutory clarity, and ancestral legal heritage advising for traditional houses[cite: 11, 12].</p>
-          <h4>CONTEXTUAL STRUCTURED FEES</h4>
-          <a href="#contact">SUBMIT SOVEREIGN BRIEF</a>
-        </article>
-
-        <article class="service-card">
-          <h3>THE POPI SHOW COLLABORATION</h3>
-          <p>Deep-dive multidisciplinary geographic research partnerships focusing on eQonce and kuGompo river systems[cite: 11, 12].</p>
-          <h4>PROJECT ACCREDITED SCALE</h4>
-          <a href="#contact">INQUIRE FOR COLLABORATION</a>
-        </article>
-
-        <article class="service-card wide">
-          <h3>KEYNOTE SPEECHES & HERITAGE EVENTS</h3>
-          <p>Cinematic public addresses regarding cultural architecture, identity tracking, and knowledge systems. Verified presenter for elite bodies including the UCT Xhosa Society[cite: 11, 12].</p>
-          <a href="#contact">REQUEST EXTENDED KEYNOTE ENGAGEMENT</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- CHAPTER 4: DISTRIBUTED BROADCAST footprint -->
-    <section id="media" class="media-section section-pad dark-block">
-      <p class="center-kicker">Algorithmic Scaling & Impact Numbers</p>
-      <h2 class="section-title white-title">DIGITAL EDUCATION ECOSYSTEM</h2>
-
-      <div class="media-grid">
-        <div class="media-card">
-          <h3>1.8M+ Views</h3>
-          <p>TIKTOK MICRO-LEARNING INSIGHTS[cite: 11, 12]</p>
-        </div>
-        <div class="media-card">
-          <h3>12.5K+ Hours</h3>
-          <p>YOUTUBE DOCUMENTARY LECTURES[cite: 11, 12]</p>
-        </div>
-        <div class="media-card">
-          <h3>14M+ Views</h3>
-          <p>FACEBOOK GEOGRAPHICALA ETYMA CORRECTIONS[cite: 11, 12]</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 5: ADVISORY FEEDBACKS -->
-    <section class="events-section section-pad">
-      <div class="events-grid">
-        <div>
-          <h2 class="section-title" style="font-size: 32px; text-align: left; margin-bottom: 40px;">FIELD ENGAGEMENTS</h2>
-
-          <div class="event-item">
-            <div class="event-date"><strong>24</strong><span>JUN</span></div>
-            <div class="event-details"><h3>University Curriculum Summit</h3><p>DECOLONIAL METHODOLOGY</p></div>
-          </div>
-
-          <div class="event-item">
-            <div class="event-date"><strong>12</strong><span>JUL</span></div>
-            <div class="event-details"><h3>Traditional Council Briefing</h3><p>CUSTOMARY SYSTEMS ADVISORY</p></div>
-          </div>
-        </div>
-
-        <aside class="testimonial">
-          <p class="section-kicker">Epistemic Transformation Witness</p>
-          <blockquote>
-            "The Project ||Ei!nasi course structure completely stripped away inherited colonial confusion. I finally found my structural civilisational center."[cite: 11, 12]
-          </blockquote>
-        </aside>
-      </div>
-    </section>
-
-    <!-- CHAPTER 6: REPOSITORY REVELATION -->
-    <section id="bookstore" class="bookstore-section section-pad">
-      <div class="book-icon">❖</div>
-      <h2 class="section-title">THE BOOKSTORE REPOSITORY</h2>
-      <p>
-        Access Sandile Tukani's compiled dictionaries, missing historical documents, and specialized onomastic texts authored by leading indigenous researchers.
-      </p>
-      <a href="#contact" class="dark-button-action">ENTER ENCRYPTED REPOSITORY</a>
-    </section>
-
-    <!-- CHAPTER 7: SECURITY ENTRY PARAMETERS -->
-    <section id="contact" class="contact-section section-pad dark-block">
-      <div class="contact-brand">
-        <h2>uNdoqo Sanctuary</h2>
-        <p>Sandile Tukani University</p>
-        <em>Reclaiming memory. Restoring identity. Reawakening indigenous knowledge[cite: 11, 12].</em>
-      </div>
-
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-row">
-          <input type="text" placeholder="Full Professional Name" required />
-          <input type="email" placeholder="Verified Institution Email Address" required />
-        </div>
-
-        <select required>
-          <option value="" disabled selected>Select Engagement Parameter</option>
-          <option value="course">Course & Research Initiative Registration[cite: 11, 12]</option>
-          <option value="academic">Post-Graduate Academic Consultation[cite: 11, 12]</option>
-          <option value="royal">Sovereign Royal Lineage Customary Advisory[cite: 11, 12]</option>
-          <option value="keynote">Heritage Keynote / Lecture Booking[cite: 11, 12]</option>
-        </select>
-
-        <textarea placeholder="Outline the parameters of your inquiry clearly..."></textarea>
-
-        <div class="form-actions">
-          <button type="submit" class="submit-btn">Transmit Formal Inquiry</button>
-          <a href="https://wa.me/27123456789" class="whatsapp-button" target="_blank" rel="noopener">WhatsApp Direct Pipeline</a>
-        </div>
-      </form>
     </section>
   </main>
+
+  <footer>
+    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

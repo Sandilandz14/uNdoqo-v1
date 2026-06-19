@@ -1,47 +1,45 @@
 /**
- * Sandile Tukani University (STU) - Core Web App Layer
- * Verification & Interactive Framework Logic
+ * uNdoqo Application System Layer
+ * Sandile Tukani University (STU) Core Logic
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("STU Framework System Node initialized. Epistemic parameters validated.");
+  console.log("STU Multi-Page Application Core Nodes Active.");
 
-  // Clean Navigation Scroll Padding Handler
-  const navbar = document.querySelector(".navbar");
-  if (navbar) {
-    const setScrollPadding = () => {
-      const navHeight = navbar.offsetHeight;
-      document.documentElement.style.scrollPaddingTop = `${navHeight}px`;
-    };
-    setScrollPadding();
-    window.addEventListener("resize", setScrollPadding);
-  }
+  // Automatic Menu State Reset Handler on Window Scaling
+  const menuCheckbox = document.getElementById("menu-toggle-checkbox");
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1024 && menuCheckbox && menuCheckbox.checked) {
+      menuCheckbox.checked = false;
+    }
+  });
 
-  // Smooth Form Intercept Simulation
-  const contactForm = document.querySelector(".contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+  // Intercept Simulation Layer for Contact Templates
+  const asyncForm = document.querySelector("form");
+  if (asyncForm) {
+    asyncForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const submitBtn = contactForm.querySelector(".submit-btn");
-      if (submitBtn) {
-        submitBtn.textContent = "TRANSMITTING DATA...";
-        submitBtn.style.opacity = "0.7";
-        submitBtn.style.pointerEvents = "none";
-        
+      const actionBtn = asyncForm.querySelector("button");
+      if (actionBtn) {
+        const originalText = actionBtn.textContent;
+        actionBtn.textContent = "TRANSMITTING TO BUREAU...";
+        actionBtn.style.opacity = "0.7";
+        actionBtn.style.pointerEvents = "none";
+
         setTimeout(() => {
-          submitBtn.textContent = "TRANSMISSION SECURED";
-          submitBtn.style.background = "#25d366";
-          submitBtn.style.color = "#ffffff";
-          contactForm.reset();
-          
+          actionBtn.textContent = "TRANSMISSION SECURED";
+          actionBtn.style.background = "#25d366";
+          actionBtn.style.color = "#ffffff";
+          asyncForm.reset();
+
           setTimeout(() => {
-            submitBtn.textContent = "Transmit Formal Inquiry";
-            submitBtn.style.background = "#14b8a6";
-            submitBtn.style.color = "#071210";
-            submitBtn.style.pointerEvents = "auto";
-            submitBtn.style.opacity = "1";
-          }, 3000);
-        }, 1500);
+            actionBtn.textContent = originalText;
+            actionBtn.style.background = "#14b8a6";
+            actionBtn.style.color = "#071210";
+            actionBtn.style.pointerEvents = "auto";
+            actionBtn.style.opacity = "1";
+          }, 2500);
+        }, 1200);
       }
     });
   }
