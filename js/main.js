@@ -40,5 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
       menuCheckbox.checked = false;
       document.body.classList.remove("menu-open");
     }
+
+  // Course Enrollment Auto Population
+  const courseField = document.getElementById("selected-course");
+  const selectedCourseDisplay = document.getElementById(  "selected-course-display");
+
+  if (courseField) {
+  const params = new URLSearchParams(window.location.search);
+  const course = params.get("course");
+
+  if (course) {
+    courseField.value = course;
+    if (selectedCourseDisplay) {
+      selectedCourseDisplay.textContent =
+        "Selected Course: " + course;
+    }
+  }
+}
   });
 });

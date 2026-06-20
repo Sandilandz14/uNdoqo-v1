@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -19,14 +19,12 @@
   <meta name="author" content="Sandile Tukani University" />
 
   <meta property="og:title" content="Contact | Sandile Tukani University" />
-  <meta property="og:description" content="Submit enquiries for consultations, courses, media engagements, and academic partnerships." />
+  <meta
+    property="og:description"
+    content="Submit enquiries for consultations, courses, media engagements, and academic partnerships."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/logo/STU_logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact | Sandile Tukani University" />
-  <meta name="twitter:description" content="Connect with STU for indigenous knowledge, consultation, media, and academic enquiries." />
-  <meta name="twitter:image" content="../assets/logo/STU_logo.png" />
 
   <link rel="icon" type="image/png" href="../assets/logo/STU_logo.png" />
 
@@ -37,7 +35,11 @@
 <body class="dark-block">
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <a href="../index.html" class="brand">
-      <img src="../assets/logo/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+      <img
+        src="../assets/logo/STU_logo.png"
+        alt="Sandile Tukani University Logo"
+        class="logo-image"
+      />
     </a>
 
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
@@ -55,91 +57,131 @@
       <li><a href="consultations.html">CONSULTATIONS</a></li>
       <li><a href="media.html">MEDIA</a></li>
       <li><a href="bookstore.html">BOOKSTORE</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="contact.html" class="active-nav">CONTACT</a></li>
     </ul>
   </nav>
 
   <section class="page-hero">
-    <p class="hero-kicker">System Engagement Protocols</p>
-    <h1 class="white-title">Contact Framework</h1>
+    <p class="hero-kicker">Sandile Tukani University is here to serve.</p>
+    <h1 class="white-title">Undoqo Heritage Institute</h1>
   </section>
 
-  <main class="section-pad">
+  <main class="section-pad contact-layout-container watermark-bg-container">
     <div class="subpage-split-layout">
-      <div>
-        <h2 class="contact-heading">Office of the Indigenous Knowledge Bureau</h2>
+      
+      <!-- LEFT BRANDING PANEL -->
+      <div class="contact-info-panel">
+        <h2 class="contact-heading">Contact us to:</h2>
+        <ul class="contact-requirements-list">
+          <li>Join our programmes,</li>
+          <li>Make an inquiry,</li>
+          <li>Find what suits you best,</li>
+          <li>Book a session or public engagement</li>
+        </ul>
 
-        <p class="contact-copy">
-          To initiate academic partnerships, customary advisory briefs, or media alignment,
-          register your baseline details through the verified pipeline.
+        <blockquote class="biko-quote">
+          "Changes which are to come can only come as a result of a programme worked out by native people."
+        </blockquote>
+
+        <p class="contact-email">
+          Direct message: <a href="mailto:ask_stu@outlook.com">ask_stu@outlook.com</a>
         </p>
-
-        <p class="contact-email">Direct Link Pipeline: stukani100@gmail.com</p>
       </div>
 
-      <form
-        class="contact-form-panel"
-        name="stu-contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="stu-contact" />
-
-        <p class="hidden-field">
-          <label>
-            Do not fill this out:
-            <input name="bot-field" />
-          </label>
-        </p>
-
-        <input
-          type="text"
-          name="full-name"
-          placeholder="Full Professional Name"
-          required
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Institutional Email Address"
-          required
-        />
-        
-        <select name="inquiry-type" required>
-          <option value="" disabled selected>Select Inquiry Parameters</option>
-          <option value="course">Course &amp; Research Initiative Registration</option>
-          <option value="advisory">Post-Graduate Academic Consultation</option>
-          <option value="royal">Sovereign Royal Customary Advisory</option>
-          <option value="keynote">Keynote / Lecture Engagement Brief</option>
-        </select>
-        
-        <textarea
-          name="message"
-          placeholder="Outline your parameters clearly..."
-        ></textarea>
-        
-        <div class="contact-actions">
-          <button type="submit" class="btn btn-primary">Transmit Brief</button>
-
-          <a
-            href="https://wa.me/27123456789"
-            class="whatsapp-button-link"
-            target="_blank"
-            rel="noopener"
-          >
-            WhatsApp Pipeline
-          </a>
+      <!-- RIGHT REGISTRATION WIDGET CARD -->
+      <div class="form-card-container">
+        <div class="form-card-banner">
+          <img src="../assets/images/huts-african.jpg" alt="Sandile Tukani University Campus Architecture" class="banner-img" />
         </div>
-      </form>
+
+        <form
+          class="contact-form-panel-v2"
+          name="stu-contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="stu-contact" />
+
+          <p class="hidden-field" style="display:none;">
+            <label>
+              Do not fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="form-row-split">
+            <div class="form-field-group">
+              <label class="field-label">First name</label>
+              <input
+                type="text"
+                name="first-name"
+                placeholder="First name"
+                required
+              />
+            </div>
+            <div class="form-field-group">
+              <label class="field-label">Last name</label>
+              <input
+                type="text"
+                name="last-name"
+                placeholder="Last name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="field-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <div class="form-field-group">
+            <label class="field-label">Programme of interest</label>
+            <select name="programme-interest" required>
+              <option value="" disabled selected>Select option...</option>
+              <option value="project-eiinasi">Project ||ein!asi</option>
+              <option value="project-kora">!Kora kobab ada</option>
+              <option value="project-kwaxhosa">KwaXhosa zibenza zibutya</option>
+              <option value="consultation">Consultation</option>
+              <option value="public-engagement">Book public engagement</option>
+            </select>
+          </div>
+
+          <div class="form-field-group">
+            <label class="field-label">Leave a message</label>
+            <textarea
+              name="message"
+              placeholder="Type your message here..."
+            ></textarea>
+          </div>
+
+          <div class="contact-actions-v2">
+            <button type="submit" class="btn btn-submit-inquiry">Submit inquiry</button>
+            <a
+              href="https://wa.me/27123456789"
+              class="whatsapp-join-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Join Now
+            </a>
+          </div>
+        </form>
+      </div>
+
     </div>
   </main>
 
   <footer>
     <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
   </footer>
-  
+
   <script src="../js/main.js"></script>
 </body>
 </html>

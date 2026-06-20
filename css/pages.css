@@ -24,6 +24,8 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
   align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
 .subpage-accent-card {
@@ -66,10 +68,10 @@
 
 /* --- CONTACT INTERIOR SYSTEMS CLEANUP --- */
 .contact-heading {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 16px;
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-weight: 800;
   color: var(--white);
 }
 
@@ -79,53 +81,258 @@
 }
 
 .contact-email {
+  color: var(--white); /* Updated to pure white */
+  font-size: 15px;
+  margin-top: 32px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Ensures contrast over background photo */
+}
+
+.contact-email a {
   color: var(--turquoise);
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.contact-form-panel {
-  display: flex;
-  flex-direction: column;
-  background: var(--dark-surface);
-  padding: 32px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.contact-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 10px;
-}
-
-.whatsapp-button-link {
-  background: #25d366;
-  color: var(--white);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
+  font-weight: bold;
   transition: var(--transition-smooth);
 }
 
-.whatsapp-button-link:hover {
-  background: #20ba5a;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 640px) {
-  .contact-actions {
-    grid-template-columns: 1fr;
-  }
+.contact-email a:hover {
+  text-decoration: underline;
 }
 
 .hidden-field {
   display: none;
+}
+
+/* ==========================================================================
+   STU CARD REGISTRATION ENGINE WITH CUSTOM VISIBILITY RATIOS
+   ========================================================================== */
+
+.watermark-bg-container {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: 
+    linear-gradient(to right, rgba(7, 18, 16, 0.6) 30%, rgba(12, 24, 21, 0.6)),
+    url('../assets/logo/undoqo-logo.png'),
+    url('../assets/images/jackal-black-back.jpg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, 15% 65%, center;
+  background-size: auto, 450px, cover;
+  background-attachment: scroll, scroll, fixed;
+}
+
+.watermark-bg-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/logo/undoqo-logo.png');
+  background-repeat: no-repeat;
+  background-position: 15% 65%;
+  background-size: 450px;
+  opacity: 1.0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-layout-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info-panel {
+  position: relative;
+  z-index: 2;
+  padding-right: 20px;
+}
+
+.contact-requirements-list {
+  list-style-type: none;
+  margin: 24px 0 32px 0;
+  padding: 0;
+}
+
+.contact-requirements-list li {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+  padding-left: 24px;
+}
+
+.contact-requirements-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--turquoise);
+  font-weight: 800;
+}
+
+/* Steve Biko Philosophical Quote Layer */
+.biko-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--soft-white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border-left: 2px solid var(--turquoise);
+  padding-left: 16px;
+  margin: 32px 0;
+  max-width: 480px;
+}
+
+/* INTERIOR REGISTRATION CARD WIDGET FRAME */
+.form-card-container {
+  position: relative;
+  z-index: 2;
+  background: #f4faf8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  max-width: 580px;
+  width: 100%;
+}
+
+.form-card-banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.form-card-banner .banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTROL PACK PANEL STACKS */
+.contact-form-panel-v2 {
+  display: flex;
+  flex-direction: column;
+  background: #f4faf8 !important;
+  padding: 36px 40px 40px 40px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field-label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark-prime);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* TYPOGRAPHY OVERRIDES FOR INPUTS */
+.contact-form-panel-v2 input,
+.contact-form-panel-v2 select,
+.contact-form-panel-v2 textarea {
+  background: var(--white) !important;
+  border: 1px solid rgba(7, 18, 16, 0.15) !important;
+  color: var(--text-dark) !important;
+  border-radius: 6px !important;
+  padding: 14px 16px !important;
+  font-size: 15px !important;
+  font-family: var(--font-sans) !important;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.contact-form-panel-v2 input:focus,
+.contact-form-panel-v2 select:focus,
+.contact-form-panel-v2 textarea:focus {
+  border-color: var(--turquoise) !important;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15) !important;
+}
+
+.contact-form-panel-v2 textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* INTERACTION REDIRECTION ACTION LINKS */
+.contact-actions-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.btn-submit-inquiry {
+  background: var(--dark-prime);
+  color: var(--white);
+  padding: 14px 28px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-submit-inquiry:hover {
+  background: var(--dark-surface);
+  transform: translateY(-2px);
+}
+
+.whatsapp-join-btn {
+  background: #25d366;
+  color: var(--white);
+  padding: 14px 28px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-join-btn:hover {
+  background: #1eb854;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE LAYOUT MATRIX CONTROLS */
+@media (max-width: 900px) {
+  .watermark-bg-container {
+    background-position: center, center 20%, center;
+    background-size: auto, 320px, cover;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row-split {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contact-actions-v2 {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-panel-v2 {
+    padding: 24px;
+  }
 }
