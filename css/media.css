@@ -1,6 +1,30 @@
 /* ==========================================================================
-   css/media.css - METRICS AND ADJACENT MEDIA SECTION WRAPPERS
+   css/media.css - METRICS, GALLERIES, AND SOCIAL PORTALS ENGINE
    ========================================================================== */
+
+/* --- HERO BACKGROUND CONTAINER IMAGES OVERLAY --- */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark-prime) !important;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/chacma-baboon.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.page-hero .hero-kicker,
+.page-hero .white-title {
+  position: relative;
+  z-index: 1;
+}
 
 .media-intro-wrapper {
   margin-bottom: 60px;
@@ -12,7 +36,7 @@
 
 .media-stat-panel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
@@ -20,9 +44,25 @@
 .stat-item-box {
   background: var(--dark-surface);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 48px;
+  padding: 48px 24px;
   border-radius: 8px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 18, 16, 0.58);
+  z-index: 1;
+}
+
+.stat-metric,
+.stat-label {
+  position: relative;
+  z-index: 2;
 }
 
 .stat-metric {
@@ -36,5 +76,117 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.tiktok-stat-box::before,
+.youtube-stat-box::before,
+.facebook-stat-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.tiktok-stat-box::before {
+  background-image: url("../assets/images/tiktok-100.jpg");
+}
+
+.youtube-stat-box::before {
+  background-image: url("../assets/images/youtube-2026.jpg");
+}
+
+.facebook-stat-box::before {
+  background-image: url("../assets/images/facebook-100.jpg");
+}
+
+.media-gallery-section {
+  margin-top: 100px;
+}
+
+.media-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.media-gallery-card {
+  background: var(--dark-surface);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.media-gallery-card video {
+  width: 100%;
+  display: block;
+  background: #000000;
+}
+
+.media-gallery-card h3 {
+  padding: 20px 20px 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.media-gallery-card p {
+  padding: 0 20px 20px;
+  font-size: 14px;
   color: var(--text-muted);
+}
+
+.social-platform-section {
+  margin-top: 100px;
+}
+
+.social-portal-card {
+  padding: 0 !important;
+  overflow: hidden;
+  background: var(--dark-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.social-img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--dark-prime);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.social-portal-card:hover .social-card-img {
+  transform: scale(1.04);
+}
+
+.social-card-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.social-card-content h3 {
+  color: var(--white);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.social-card-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
 }
