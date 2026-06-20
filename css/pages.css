@@ -125,3 +125,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+.hidden-field {
+  display: none;
+}
