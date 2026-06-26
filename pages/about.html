@@ -3,69 +3,17 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>About Us | Sandile Tukani University (STU)</title>
-
-  <meta
-    name="description"
-    content="Learn about Sandile Tukani University, an indigenous knowledge institute focused on African memory, language restoration, cultural preservation, onomastics, and historical correction."
-  />
-
-  <meta
-    name="keywords"
-    content="Sandile Tukani University, uNdoqo, indigenous knowledge institute, African memory, language restoration, cultural preservation, onomastics, lineage studies, African history"
-  />
-
-  <meta name="author" content="Sandile Tukani University" />
-
-  <meta property="og:title" content="About Us | Sandile Tukani University" />
-  <meta
-    property="og:description"
-    content="Discover the mission, vision, and indigenous knowledge framework behind Sandile Tukani University."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="../assets/logo/STU_logo.png" />
-
   <link rel="icon" type="image/png" href="../assets/logo/STU_logo.png" />
-
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/pages.css" />
-  <style>
-    /* Add this to your pages.css or here for the About page functionality */
-    .hero-slideshow {
-      height: 50vh;
-      background-size: cover;
-      background-position: center;
-      transition: background-image 1s ease-in-out;
-    }
-    .article-block {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 80px;
-    }
-    .article-img { width: 400px; height: 300px; object-fit: cover; border-radius: 8px; }
-    .reversed { flex-direction: row-reverse; }
-    .article-text h2 { margin-bottom: 20px; color: var(--dark-prime); }
-    @media (max-width: 900px) {
-      .article-block { flex-direction: column; }
-    }
-  </style>
 </head>
 
 <body>
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="../index.html" class="brand">
-      <img src="../assets/logo/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
-    </a>
-
+    <a href="../index.html" class="brand"><img src="../assets/logo/STU_logo.png" alt="STU Logo" class="logo-image" /></a>
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
-    <label for="menu-toggle-checkbox" class="hamburger-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
+    <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="about.html">ABOUT US</a></li>
@@ -82,11 +30,11 @@
     <h1>THE GUARDIANS OF ESSENCE</h1>
   </section>
 
-  <section class="about-hero-slideshow hero-slideshow"></section>
+  <section class="hero-slideshow"></section>
 
   <main class="section-pad">
     <article class="article-block">
-      <img src="../assets/images/narrative1.jpg" alt="Indigenous Narrative" class="article-img">
+      <img src="../assets/images/abaThwa-men-hunt.jpg" alt="Indigenous Narrative" class="article-img">
       <div class="article-text">
         <h2>The Foundation of Identity</h2>
         <p>Our work begins with the acknowledgement of our ancestry and the structural recovery of historical configurations safely within the modern paradigm.</p>
@@ -94,10 +42,18 @@
     </article>
 
     <article class="article-block reversed">
-      <img src="../assets/images/narrative2.jpg" alt="Heritage Restoration" class="article-img">
+      <img src="../assets/images/greater-kudu.jpg" alt="Heritage Restoration" class="article-img">
       <div class="article-text">
         <h2>Restoring the Memory</h2>
         <p>Reclaiming the archives lost to history through scientific onomastics, clarifying traditional lineage frameworks, and stabilizing pre-colonial language matrices.</p>
+      </div>
+    </article>
+
+    <article class="article-block">
+      <img src="../assets/images/owl-2026.png" alt="Future Advancement" class="article-img">
+      <div class="article-text">
+        <h2>Advancing the Future</h2>
+        <p>By building independent institutional blueprints, we ensure that indigenous knowledge systems thrive as functional, relevant pillars for generations to come.</p>
       </div>
     </article>
   </main>
@@ -108,8 +64,13 @@
 
   <script src="../js/main.js"></script>
   <script>
-    // Simple Slideshow Logic
-    const images = ["../assets/images/heritage1.jpg", "../assets/images/heritage2.jpg", "../assets/images/heritage3.jpg"];
+    const images = [
+      "../assets/images/heritage1.jpg", 
+      "../assets/images/heritage2.jpg", 
+      "../assets/images/heritage3.jpg",
+      "../assets/images/heritage4.jpg",
+      "../assets/images/heritage5.jpg"
+    ];
     let currentIndex = 0;
     const slideElement = document.querySelector(".hero-slideshow");
     if (slideElement) {

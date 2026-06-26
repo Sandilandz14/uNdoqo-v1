@@ -384,3 +384,23 @@
 
 .book-card h3 { margin: 15px 0 5px; font-size: 18px; }
 .price-tag { font-weight: 800; margin: 10px 0; color: var(--turquoise); }
+
+.hero-slideshow {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+.article-block {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.article-img { width: 400px; height: 300px; object-fit: cover; border-radius: 8px; }
+.reversed { flex-direction: row-reverse; }
+.article-text h2 { margin-bottom: 20px; color: var(--dark-prime); }
+@media (max-width: 900px) {
+  .article-block { flex-direction: column; }
+  .article-img { width: 100%; }
+}
