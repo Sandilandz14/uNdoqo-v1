@@ -3,58 +3,17 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>The Bookstore Repository | Sandile Tukani University (STU)</title>
-
-  <meta
-    name="description"
-    content="Explore the Sandile Tukani University bookstore repository for indigenous dictionaries, historical monographs, linguistic materials, rare manuscripts, and cultural reference works."
-  />
-
-  <meta
-    name="keywords"
-    content="Sandile Tukani University bookstore, indigenous books, African dictionaries, rare manuscripts, linguistic materials, historical monographs, indigenous archive, uNdoqo bookstore"
-  />
-
-  <meta name="author" content="Sandile Tukani University" />
-
-  <meta property="og:title" content="The Bookstore Repository | Sandile Tukani University" />
-  <meta
-    property="og:description"
-    content="A knowledge repository for indigenous books, dictionaries, rare historical materials, and cultural reference works."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="../assets/logo/STU_logo.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Bookstore Repository | Sandile Tukani University" />
-  <meta
-    name="twitter:description"
-    content="Explore indigenous books, dictionaries, rare manuscripts, and cultural reference materials."
-  />
-  <meta name="twitter:image" content="../assets/logo/STU_logo.png" />
-
-  <link rel="icon" type="image/png" href="../assets/logo/STU_logo.png" />
-
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/pages.css" />
 </head>
-
 <body>
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <a href="../index.html" class="brand">
-      <!-- Updated Logo Sub-folder Path -->
-      <img src="../assets/logo/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
+      <img src="../assets/logo/STU_logo.png" alt="STU Logo" class="logo-image" />
     </a>
-
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
-
-    <label for="menu-toggle-checkbox" class="hamburger-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
+    <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="about.html">ABOUT US</a></li>
@@ -66,41 +25,30 @@
     </ul>
   </nav>
 
-  <section class="page-hero">
-    <p class="hero-kicker">Knowledge Repository</p>
-    <h1>The Bookstore</h1>
-  </section>
-
   <main class="section-pad">
     <div class="subpage-split-layout">
       <div class="subpage-narrative-block">
-        <p>
-          A centralized hub preserving specialized linguistic materials,
-          ancestral dictionaries, historical monographs, and reference works
-          compiled by multiple indigenous authors.
-        </p>
+        <p>A centralized hub preserving specialized linguistic materials, ancestral dictionaries, historical monographs, and reference works compiled by multiple indigenous authors.</p>
+        
+        <div class="filter-container" style="margin-top: 30px;">
+          <label style="display:block; margin-bottom: 8px; font-weight: 800; font-size: 13px; text-transform: uppercase;">Filter by Author:</label>
+          <select id="author-filter" onchange="filterBooks()" style="padding: 10px; width: 100%; border-radius: 4px;">
+            <option value="All">All Authors</option>
+          </select>
+        </div>
       </div>
-
       <article class="subpage-accent-card">
         <h3>LITERARY PROJECTS</h3>
-
-        <p>
-          The collection features core indigenous tracking reference materials,
-          toponymic text logs, and books focused on correcting systemic
-          historical erasures.
-        </p>
-
-        <button class="btn btn-primary full-width-action">
-          Browse Repository Catalogue
-        </button>
+        <p>The collection features core indigenous tracking reference materials, toponymic text logs, and books focused on correcting systemic historical erasures.</p>
       </article>
     </div>
+    <div id="book-grid" class="book-grid-layout" style="margin-top: 60px;"></div>
   </main>
 
   <footer>
     <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
   </footer>
-
   <script src="../js/main.js"></script>
+  <script src="../js/bookstore.js"></script>
 </body>
 </html>

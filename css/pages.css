@@ -337,3 +337,50 @@
   }
 }
 
+/* Slideshow */
+.hero-slideshow {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+/* Article Layout */
+.article-block {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.article-img { width: 400px; height: 300px; object-fit: cover; border-radius: 8px; }
+.reversed { flex-direction: row-reverse; }
+
+/* Bookstore Grid */
+#book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.book-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.book-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.book-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--dark-prime);
+}
+
+.book-card h3 { margin: 15px 0 5px; font-size: 18px; }
+.price-tag { font-weight: 800; margin: 10px 0; color: var(--turquoise); }

@@ -26,29 +26,40 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/logo/STU_logo.png" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Us | Sandile Tukani University" />
-  <meta
-    name="twitter:description"
-    content="An institute dedicated to indigenous knowledge, African memory, language restoration, and cultural preservation."
-  />
-  <meta name="twitter:image" content="../assets/logo/STU_logo.png" />
-
   <link rel="icon" type="image/png" href="../assets/logo/STU_logo.png" />
 
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/pages.css" />
+  <style>
+    /* Add this to your pages.css or here for the About page functionality */
+    .hero-slideshow {
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+    .article-block {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .article-img { width: 400px; height: 300px; object-fit: cover; border-radius: 8px; }
+    .reversed { flex-direction: row-reverse; }
+    .article-text h2 { margin-bottom: 20px; color: var(--dark-prime); }
+    @media (max-width: 900px) {
+      .article-block { flex-direction: column; }
+    }
+  </style>
 </head>
 
 <body>
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <a href="../index.html" class="brand">
-      <!-- Updated Logo Sub-folder Path -->
       <img src="../assets/logo/STU_logo.png" alt="Sandile Tukani University Logo" class="logo-image" />
     </a>
 
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
-
     <label for="menu-toggle-checkbox" class="hamburger-label">
       <span></span>
       <span></span>
@@ -71,37 +82,24 @@
     <h1>THE GUARDIANS OF ESSENCE</h1>
   </section>
 
+  <section class="about-hero-slideshow hero-slideshow"></section>
+
   <main class="section-pad">
-    <div class="subpage-split-layout">
-
-      <article class="subpage-accent-card">
-        <h3>SPHERES OF ACTION</h3>
-
-        <p>
-          <strong>❖ Core Principles:</strong>
-          Love your culture, own your essence, and protect the trinity system.
-        </p>
-
-        <p>
-          <strong>❖ Founder Narrative:</strong>
-          Developed under the vision of Sandile waMadzikane.
-        </p>
-
-        <p>
-          <strong>❖ Vision Framework:</strong>
-          Total structural recovery of historical configurations safely.
-        </p>
-      </article>
-
-      <div class="subpage-narrative-block">
-        <p>
-          Sandile Tukani University functions as an institute mapping oral lineages
-          and toponymy profiles to build a clear blueprint for indigenous
-          self-sufficiency.
-        </p>
+    <article class="article-block">
+      <img src="../assets/images/narrative1.jpg" alt="Indigenous Narrative" class="article-img">
+      <div class="article-text">
+        <h2>The Foundation of Identity</h2>
+        <p>Our work begins with the acknowledgement of our ancestry and the structural recovery of historical configurations safely within the modern paradigm.</p>
       </div>
+    </article>
 
-    </div>
+    <article class="article-block reversed">
+      <img src="../assets/images/narrative2.jpg" alt="Heritage Restoration" class="article-img">
+      <div class="article-text">
+        <h2>Restoring the Memory</h2>
+        <p>Reclaiming the archives lost to history through scientific onomastics, clarifying traditional lineage frameworks, and stabilizing pre-colonial language matrices.</p>
+      </div>
+    </article>
   </main>
 
   <footer>
@@ -109,5 +107,18 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    // Simple Slideshow Logic
+    const images = ["../assets/images/heritage1.jpg", "../assets/images/heritage2.jpg", "../assets/images/heritage3.jpg"];
+    let currentIndex = 0;
+    const slideElement = document.querySelector(".hero-slideshow");
+    if (slideElement) {
+      slideElement.style.backgroundImage = `url(${images[0]})`;
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        slideElement.style.backgroundImage = `url(${images[currentIndex]})`;
+      }, 5000);
+    }
+  </script>
 </body>
 </html>
