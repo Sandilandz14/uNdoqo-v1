@@ -40,22 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
       menuCheckbox.checked = false;
       document.body.classList.remove("menu-open");
     }
+  });
 
-  // Course Enrollment Auto Population
-  const courseField = document.getElementById("selected-course");
-  const selectedCourseDisplay = document.getElementById(  "selected-course-display");
+  // Course Enrollment Auto Population for Contact Form
+  const programmeSelect = document.querySelector('select[name="programme-interest"]');
+  if (programmeSelect) {
+    const params = new URLSearchParams(window.location.search);
+    const courseParam = params.get("course");
 
-  if (courseField) {
-  const params = new URLSearchParams(window.location.search);
-  const course = params.get("course");
+    if (courseParam) {
+      // Mapping display names to form values
+      const mapping = {
+        "Project EiNasi": "project-eiinasi",
+        "Kora Kobab Ada": "project-kora",
+        "KwaXhosa Zibenza Zibutya": "project-kwaxhosa"
+      };
 
-  if (course) {
-    courseField.value = course;
-    if (selectedCourseDisplay) {
-      selectedCourseDisplay.textContent =
-        "Selected Course: " + course;
+      if (mapping[courseParam]) {
+        programmeSelect.value = mapping[courseParam];
+      }
     }
   }
-}
-  });
 });

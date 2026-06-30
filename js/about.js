@@ -1,15 +1,26 @@
 /**
- * About Page Slideshow Engine
+ * About Page Slideshow Component
  */
-document.addEventListener("DOMContentLoaded", () => {
-  const images = ["../assets/images/heritage1.jpg", "../assets/images/heritage2.jpg", "../assets/images/heritage3.jpg"];
-  let currentIndex = 0;
-  const slideElement = document.querySelector(".hero-slideshow");
+let slideIndex = 1;
 
-  if (slideElement) {
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      slideElement.style.backgroundImage = `url(${images[currentIndex]})`;
-    }, 5000);
-  }
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+  
+  for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+  
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+function moveSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides(slideIndex);
+  // Auto-play every 5 seconds
+  setInterval(() => moveSlides(1), 5000);
 });

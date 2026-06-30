@@ -3,53 +3,21 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Contact | Sandile Tukani University (STU)</title>
 
-  <meta
-    name="description"
-    content="Contact Sandile Tukani University for academic partnerships, indigenous knowledge consultations, course registration, media engagements, and cultural advisory requests."
-  />
-
-  <meta
-    name="keywords"
-    content="contact Sandile Tukani University, uNdoqo contact, indigenous consultation, academic partnership, cultural advisory, course registration, keynote booking"
-  />
-
-  <meta name="author" content="Sandile Tukani University" />
-
-  <meta property="og:title" content="Contact | Sandile Tukani University" />
-  <meta
-    property="og:description"
-    content="Submit enquiries for consultations, courses, media engagements, and academic partnerships."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="../assets/logo/STU_logo.png" />
-
   <link rel="icon" type="image/png" href="../assets/logo/STU_logo.png" />
-
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
 </head>
 
-<body class="dark-block">
+<body class="contact-page">
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <a href="../index.html" class="brand">
-      <img
-        src="../assets/logo/STU_logo.png"
-        alt="Sandile Tukani University Logo"
-        class="logo-image"
-      />
+      <img src="../assets/logo/STU_logo.png" alt="STU Logo" class="logo-image" />
     </a>
-
     <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
-
-    <label for="menu-toggle-checkbox" class="hamburger-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
+    <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
     <ul class="nav-links">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="about.html">ABOUT US</a></li>
@@ -61,127 +29,62 @@
     </ul>
   </nav>
 
-  <section class="page-hero">
-    <p class="hero-kicker">Sandile Tukani University is here to serve.</p>
-    <h1 class="white-title">Undoqo Heritage Institute</h1>
-  </section>
-
-  <main class="section-pad contact-layout-container watermark-bg-container">
-    <div class="subpage-split-layout">
-      
-      <!-- LEFT BRANDING PANEL -->
-      <div class="contact-info-panel">
-        <h2 class="contact-heading">Contact us to:</h2>
-        <ul class="contact-requirements-list">
-          <li>Join our programmes,</li>
-          <li>Make an inquiry,</li>
-          <li>Find what suits you best,</li>
-          <li>Book a session or public engagement</li>
-        </ul>
-
-        <blockquote class="biko-quote">
-          "Changes which are to come can only come as a result of a programme worked out by native people."
-        </blockquote>
-
-        <p class="contact-email">
-          Direct message: <a href="mailto:ask_stu@outlook.com">ask_stu@outlook.com</a>
-        </p>
-      </div>
-
-      <!-- RIGHT REGISTRATION WIDGET CARD -->
-      <div class="form-card-container">
-        <div class="form-card-banner">
-          <img src="../assets/images/huts-african.jpg" alt="Sandile Tukani University Campus Architecture" class="banner-img" />
+  <main class="contact-page-shell">
+    <section class="contact-card">
+      <!-- SIDE VISUAL PANEL -->
+      <aside class="contact-visual-panel">
+        <div class="contact-brand-block">
+          <img src="../assets/logo/undoqo-logo.png" alt="uNdoqo Logo" class="contact-side-logo" />
+          <h1>Contact Us</h1>
+          <p>Join a programme, book a consultation, or send a direct enquiry to the STU knowledge bureau.</p>
         </div>
+        <div class="contact-side-details">
+          <p><strong>Email</strong><a href="mailto:ask_stu@outlook.com">ask_stu@outlook.com</a></p>
+          <p><strong>WhatsApp</strong><a href="https://wa.me/2785509649" target="_blank" rel="noopener">Join Now</a></p>
+        </div>
+      </aside>
 
-        <form
-          class="contact-form-panel-v2"
-          name="stu-contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
+      <!-- FORM SIDE -->
+      <section class="contact-form-side">
+        <form id="stu-contact-form" class="contact-form" name="stu-contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="stu-contact" />
-
-          <p class="hidden-field" style="display:none;">
-            <label>
-              Do not fill this out:
-              <input name="bot-field" />
-            </label>
-          </p>
-
-          <div class="form-row-split">
-            <div class="form-field-group">
-              <label class="field-label">First name</label>
-              <input
-                type="text"
-                name="first-name"
-                placeholder="First name"
-                required
-              />
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input id="first-name" type="text" name="first-name" required />
             </div>
-            <div class="form-field-group">
-              <label class="field-label">Last name</label>
-              <input
-                type="text"
-                name="last-name"
-                placeholder="Last name"
-                required
-              />
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input id="last-name" type="text" name="last-name" required />
             </div>
           </div>
 
-          <div class="form-field-group">
-            <label class="field-label">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
-          </div>
-
-          <div class="form-field-group">
-            <label class="field-label">Programme of interest</label>
-            <select name="programme-interest" required>
+          <div class="form-group">
+            <label for="product">Programme of interest</label>
+            <select id="product" name="product" required>
               <option value="" disabled selected>Select option...</option>
-              <option value="project-eiinasi">Project ||ein!asi</option>
-              <option value="project-kora">!Kora kobab ada</option>
-              <option value="project-kwaxhosa">KwaXhosa zibenza zibutya</option>
-              <option value="consultation">Consultation</option>
-              <option value="public-engagement">Book public engagement</option>
+              <option value="project-eiinasi">Project ||Ei!nasi</option>
+              <option value="project-kora">!Kora Kobab-ada</option>
+              <option value="project-kwaxhosa">KwaXhosa Zibenza Zibutya</option>
+              <option value="Book Consultation">Book Consultation</option>
+              <option value="Book Collab">Book Collaboration</option>
             </select>
           </div>
 
-          <div class="form-field-group">
-            <label class="field-label">Leave a message</label>
-            <textarea
-              name="message"
-              placeholder="Type your message here..."
-            ></textarea>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required>Good day STU, I would like to enroll/book this service...</textarea>
           </div>
 
-          <div class="contact-actions-v2">
-            <button type="submit" class="btn btn-submit-inquiry">Submit inquiry</button>
-            <a
-              href="https://wa.me/27123456789"
-              class="whatsapp-join-btn"
-              target="_blank"
-              rel="noopener"
-            >
-              Join Now
-            </a>
-          </div>
+          <button type="submit" class="contact-submit-btn">Send Inquiry</button>
         </form>
-      </div>
-
-    </div>
+      </section>
+    </section>
   </main>
 
-  <footer>
-    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
-  </footer>
-
+  <footer><p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p></footer>
   <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
 </body>
 </html>

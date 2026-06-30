@@ -54,6 +54,12 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(20, 184, 166, 0.1);
 }
+/* Increase logo size by 50% within the navigation bar */
+.navbar .logo-image {
+  height: 150%; /* This scales the original height by 1.5x */
+  width: auto;   /* Maintains aspect ratio */
+  max-height: 80px; /* Adjust this value if it pushes the navbar height too far */
+}
 
 .brand {
   display: flex;
