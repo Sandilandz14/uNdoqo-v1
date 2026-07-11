@@ -111,3 +111,68 @@ PostgreSQL-ready data structure
 Admin dashboard
 
 Those will move the project from a website into the first version of the actual uNdoqo platform.
+
+
+============================= UPDATES ======================================
+Notes on what is to be fixed/implemented next:
+
+- Bigger Logo
+- Use real organic photos for backgrounds, partucularly the landing page
+- Support Us --> "Donate " ?
+- Landing page: add "Follow us" {tiktok icon, youtube icon,facebook icon, etc.}
+
+---
+Bookstore :
+- Implement cart
+- Add calculator and automatic message
+- Generate order + invoice
+
+--> Reduce booktile size ( by half )
+
+---
+Media:
+Add direct Tiktok( first 5) videos and button to go to Tiktok
+Add direct Youtube (first 5 ) videos and add button to Youtube
+Add YT/TT landing pages where for bg images on the insights(data)
+- ACTIVE PORTFOLIO COLLABORATIONS
+--- popi show, uct, amangqosini, etc
+
+-----------
+Consultations & Bookings
+- CHANGE STYLING
+
+-----------------
+ABout US 
+-- Revamp page design
+-- Own it
+-- Organic photos
+-- Consise text
+-- Showcase the vision in pictures
+
+Contact us:
+
+Display big undoqo
+
+=====================================================
+NEXT:
+NEW SOFTWARE of uNdoqo.
+
+--
+Then 2 button in landing page: One "uNdoqo" another "STU"
+
+===================================================
+Clan names repository:
+Xhosa
+AmaZotsho/amaDebe
+AmaMpondo/amaMpondomse
+AmaGqunukhwebe
+!Kwi:
+- |Xam
+- Juu
+- Khakea
+Khoemana:
+- !Kora
+- Xiri
+Khoegowab:
+- Nama
+- Damara 
