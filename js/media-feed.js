@@ -1,0 +1,8 @@
+/* Feed allows verified per-video URLs only. Do not fabricate latest videos. */
+(async()=>{let feeds;try{const r=await fetch('../data/media-feeds.json');if(!r.ok)throw Error('Feed unavailable');feeds=await r.json()}catch(e){feeds={youtube:[],tiktok:[]}};
+for(const platform of ['youtube','tiktok']){const host=document.getElementById(`${platform}-feed`);if(!host)continue;let count=0;
+for(const raw of (feeds[platform]||[]).slice(0,5)){try{const u=new URL(raw);let src=null;
+if(platform==='youtube'&&['youtube.com','www.youtube.com','youtu.be','www.youtube-nocookie.com'].includes(u.hostname)){const id=u.hostname==='youtu.be'?u.pathname.slice(1):u.searchParams.get('v')||(u.pathname.match(/^\/shorts\/([\w-]+)/)||[])[1];if(id&&/^[\w-]{11}$/.test(id))src='https://www.youtube-nocookie.com/embed/'+id}
+if(platform==='tiktok'&&['tiktok.com','www.tiktok.com','m.tiktok.com'].includes(u.hostname)){const id=(u.pathname.match(/\/video\/(\d+)/)||[])[1];if(id)src='https://www.tiktok.com/player/v1/'+id}
+if(!src)continue;const iframe=document.createElement('iframe');iframe.src=src;iframe.title=platform==='tiktok'?['Indigenous names','Impundulu birdlore','IsiXhosa and !Korakobab','Indians, Moors & Shipwrecks','Khwe'][count++]:'YouTube featured video '+(++count);iframe.loading='lazy';iframe.allow='encrypted-media; picture-in-picture; fullscreen';iframe.allowFullscreen=true;if(platform==='youtube')iframe.className='youtube-frame';host.append(iframe)
+}catch(e){}}if(!count){const p=document.createElement('p');p.textContent='Video embeds are being curated. Open our official channel using the button below.';host.append(p)}}})();

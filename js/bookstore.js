@@ -1,51 +1,13 @@
-const books = [
-    { title: "Imibengo", author: "WG Bennie", format: "PDF", price: "R400", img: "imibengo-WG-Bennie.png"},
-    { title: "Olden times in Zululand", author:"AT Bryant", format:"PDF", price:"R4000", img:"olden-times.png"},
-  { title: "Intlalo kaXhosa", author: "Tiyo Soga", format: "PDF", price: "R500", img: "intlalo.png"},
-  { title: "The Record", author: "Moodie", format: "PDF", price: "R400", img: "the-record.jpg"},
-  { title: "South Eastern Bantu", author: "JH Soga", format: "PDF", price: "R350", img: "south-eastern-bantu.jpg"},
-  { title: "Battle at Mamusa",author: "Piet Erasmus", format: "PDF", price: "R250", img: "battle-at-mamusa.jpg"},
-  { title: "History of Basuto",author:"DF Ellenberger",format:"PDF", price:"R350", img:"basuto-ellenberger.png"},
- { title: "Sonqua", author: "Pieter Jolly",format: "PDF", price: "R350", img:"sonqua.png"},
- { title: "History & Ethnography of Africa south of Zambezi before 1795", author: "GM Theal", format:"PDF", price:"R500", img:"before-1795.png"},
- { title: "The Zulu People As They Were...", author:"AT Bryant", format:"PDF", price:"R250", img:"zulu-before-white-man.png"},
- { title: "Knowledge & Colonialism: 18th Century travellers in SA", author: "Brill", format:"PDF", price:"R400", img:"knowledge-colonialism.png"},
- { title: "The Wrongs of the Caffre Nation: A Narrative",author: "Jusrus", format:"PDF", price:"R350", img:"wrongs-of-the-caffre.png"},
- { title: "Myths and Legends of the Bantu", author: "Alice Werner", format: "PDF", price:"R250", img:"myths-legends.png"},
- { title: "Memoir respecting the Ntu, Khoe and !Kwi of South Africa", author: "Lieut-Col. Sutherland", format:"PDF", price:"R400", img:"ntu-khwe-kwi.png"},
- { title: "The Native Races of South Africa", author: "Stow & Theal", format:"PDF", price:"R400", img:"native-races.png"}
-];
-
-function renderBooks(filter = "All") {
-  const container = document.getElementById("book-grid");
-  const filtered = filter === "All" ? books : books.filter(b => b.author === filter);
-  
-  container.innerHTML = filtered.map(book => `
-    <article class="book-card">
-    <img src="../assets/images/bookstore-images/${book.img}" alt="${book.title}" style="width:100%; height:auto; border-radius: 4px;">
-      <h3>${book.title}</h3>
-      <p>Author: ${book.author}</p>
-      <div class="price-tag">${book.price} | ${book.format}</div>
-      <button class="btn btn-primary" onclick="alert('Added ${book.title} to cart')">Add to Cart</button>
-    </article>
-  `).join('');
-}
-
-function filterBooks() {
-  const author = document.getElementById("author-filter").value;
-  renderBooks(author);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filter = document.getElementById("author-filter");
-  const authors = [...new Set(books.map(b => b.author))];
-  
-  authors.forEach(a => {
-    const opt = document.createElement("option");
-    opt.value = a;
-    opt.textContent = a;
-    filter.appendChild(opt);
-  });
-  
-  renderBooks();
-});
+/* Real local shopping cart. All payment prices are recalculated on the server. */
+let books=[];
+const CART_KEY='undoqo-cart-v2';
+function getCart(){try{const v=JSON.parse(localStorage.getItem(CART_KEY)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch{return {}}}
+function saveCart(cart){localStorage.setItem(CART_KEY,JSON.stringify(cart));renderCart()}
+function money(value){return new Intl.NumberFormat('en-ZA',{style:'currency',currency:'ZAR'}).format(value)}
+function addToCart(id){const cart=getCart();cart[id]=Math.min(50,(Number(cart[id])||0)+1);saveCart(cart)}
+function changeQty(id,qty){const cart=getCart();qty=Math.floor(Number(qty));if(!Number.isFinite(qty)||qty<=0)delete cart[id];else cart[id]=Math.min(50,qty);saveCart(cart)}
+function renderBooks(filter='All'){const grid=document.getElementById('book-grid');if(!grid)return;grid.replaceChildren();
+for(const book of books.filter(b=>filter==='All'||b.author===filter)){const card=document.createElement('article');card.className='book-card';const img=document.createElement('img');img.src='../assets/images/bookstore-images/'+encodeURIComponent(book.img);img.alt=book.title;img.loading='lazy';const name=document.createElement('h3');name.textContent=book.title;const author=document.createElement('p');author.textContent='Author: '+book.author;const price=document.createElement('div');price.className='price-tag';price.textContent=money(book.priceZar)+' | '+book.format;const button=document.createElement('button');button.className='btn btn-primary';button.type='button';button.textContent='Add to cart';button.addEventListener('click',()=>addToCart(book.id));card.append(img,name,author,price,button);grid.append(card)}}
+function filterBooks(){renderBooks(document.getElementById('author-filter').value)}
+function renderCart(){const host=document.getElementById('cart-items');if(!host)return;const cart=getCart();host.replaceChildren();let total=0;for(const [id,qty] of Object.entries(cart)){const b=books.find(b=>b.id===id);if(!b||!Number.isInteger(qty)||qty<1)continue;total+=qty*b.priceZar;const row=document.createElement('div');row.className='und-cart-row';const desc=document.createElement('strong');desc.textContent=b.title+' — '+money(b.priceZar*qty);const controls=document.createElement('div');const minus=document.createElement('button');minus.textContent='−';minus.setAttribute('aria-label','Remove one '+b.title);minus.addEventListener('click',()=>changeQty(id,qty-1));const count=document.createElement('span');count.textContent=' '+qty+' ';const plus=document.createElement('button');plus.textContent='+';plus.setAttribute('aria-label','Add one '+b.title);plus.addEventListener('click',()=>changeQty(id,qty+1));controls.append(minus,count,plus);row.append(desc,controls);host.append(row)}if(!host.children.length)host.textContent='Your cart is empty.';document.getElementById('cart-total').textContent=money(total);const go=document.getElementById('cart-checkout');go.hidden=!total}
+document.addEventListener('DOMContentLoaded',async()=>{try{const r=await fetch('../data/catalog.json');if(!r.ok)throw Error('catalog');books=(await r.json()).filter(b=>b.format==='PDF');const filter=document.getElementById('author-filter');[...new Set(books.map(b=>b.author))].forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;filter.append(o)});renderBooks();renderCart()}catch(e){document.getElementById('book-grid').textContent='Catalog unavailable. Please refresh.'}});

@@ -1,0 +1,2 @@
+/* Netlify Forms handles submission; keep browser validation native. */
+document.addEventListener('DOMContentLoaded',()=>{const form=document.getElementById('stu-contact-form');if(!form)return;form.addEventListener('submit',()=>{const button=form.querySelector('button[type=submit]');if(button&&form.checkValidity())button.textContent='Sending…'})});

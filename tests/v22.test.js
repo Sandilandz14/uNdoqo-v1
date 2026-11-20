@@ -1,0 +1,5 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const root=path.join(__dirname,'..');const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+test('hero removes redundant explore buttons while preserving primary CTAs',()=>{const s=read('index.html');assert.doesNotMatch(s,/class="und-choice"/);assert.match(s,/Support \/ Donate/);assert.match(s,/Our Programmes/) });
+test('visible social hyperlinks have high-contrast explicit styling',()=>{assert.ok(read('css/v2.css').includes('.und-image-hero .und-social-links a:visited{color:#fff!important'))});
+test('proforma and POP sharing is enabled after the print action',()=>{const html=read('pages/checkout.html');const js=read('js/checkout.js');assert.match(html,/id="share-proforma-pop"/);assert.match(js,/share-proforma-pop'\)\.hidden=false/);assert.match(js,/27785509649/)});
+test('static preview gets descriptive Netlify Dev error and invalid JSON is handled',()=>{const js=read('js/checkout.js');assert.match(js,/Live Server only hosts static HTML/);assert.match(js,/Payment service returned an invalid response/)});

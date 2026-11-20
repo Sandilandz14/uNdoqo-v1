@@ -1,54 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Bookstore Repository | Sandile Tukani University (STU)</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/pages.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Bookstore Repository | Sandile Tukani University (STU)</title>
+<link href="../css/styles.css" rel="stylesheet"/>
+<link href="../css/pages.css" rel="stylesheet"/>
+<link href="../css/v2.css" rel="stylesheet"/>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="../index.html" class="brand">
-      <img src="../assets/logo/STU_logo.png" alt="STU Logo" class="logo-image" />
-    </a>
-    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle" />
-    <label for="menu-toggle-checkbox" class="hamburger-label"><span></span><span></span><span></span></label>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT US</a></li>
-      <li><a href="courses.html">COURSES</a></li>
-      <li><a href="consultations.html">CONSULTATIONS</a></li>
-      <li><a href="media.html">MEDIA</a></li>
-      <li><a href="bookstore.html">BOOKSTORE</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-
-  <main class="section-pad">
-    <div class="subpage-split-layout">
-      <div class="subpage-narrative-block">
-        <p>A centralized hub preserving specialized linguistic materials, ancestral dictionaries, historical monographs, and reference works compiled by multiple indigenous authors.</p>
-        
-        <div class="filter-container" style="margin-top: 30px;">
-          <label style="display:block; margin-bottom: 8px; font-weight: 800; font-size: 13px; text-transform: uppercase;">Filter by Author:</label>
-          <select id="author-filter" onchange="filterBooks()" style="padding: 10px; width: 100%; border-radius: 4px;">
-            <option value="All">All Authors</option>
-          </select>
-        </div>
-      </div>
-      <article class="subpage-accent-card">
-        <h3>LITERARY PROJECTS</h3>
-        <p>The collection features core indigenous tracking reference materials, toponymic text logs, and books focused on correcting systemic historical erasures.</p>
-      </article>
-    </div>
-    <div id="book-grid" class="book-grid-layout" style="margin-top: 60px;"></div>
-  </main>
-
-  <footer>
-    <p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
-  </footer>
-  <script src="../js/main.js"></script>
-  <script src="../js/bookstore.js"></script>
+<nav aria-label="Main Navigation" class="navbar" role="navigation">
+<a class="brand" href="../index.html">
+<img alt="STU Logo" class="logo-image" src="../assets/logo/STU_logo.png"/>
+</a>
+<input class="menu-toggle" id="menu-toggle-checkbox" type="checkbox"/>
+<label class="hamburger-label" for="menu-toggle-checkbox"><span></span><span></span><span></span></label>
+<ul class="nav-links"><li><a href="../index.html">HOME</a></li><li><a href="about.html">ABOUT US</a></li><li><a href="courses.html">COURSES</a></li><li><a href="consultations.html">CONSULTATIONS</a></li><li><a href="media.html">MEDIA</a></li><li><a aria-current="page" class="active-nav" href="bookstore.html">BOOKSTORE</a></li><li><a href="clan-repository.html">REPOSITORY</a></li><li><a href="contact.html">CONTACT</a></li></ul>
+<a class="donate-btn" href="contact.html">Partner With Us</a></nav>
+<main class="section-pad">
+<div class="subpage-split-layout">
+<div class="subpage-narrative-block">
+<p>A centralized hub preserving specialized linguistic materials, ancestral dictionaries, historical monographs, and reference works compiled by multiple indigenous authors.</p>
+<div class="filter-container" style="margin-top: 30px;">
+<label style="display:block; margin-bottom: 8px; font-weight: 800; font-size: 13px; text-transform: uppercase;">Filter by Author:</label>
+<select id="author-filter" onchange="filterBooks()" style="padding: 10px; width: 100%; border-radius: 4px;">
+<option value="All">All Authors</option>
+</select>
+</div>
+</div>
+<article class="subpage-accent-card">
+<h3>LITERARY PROJECTS</h3>
+<p>The collection features core indigenous tracking reference materials, toponymic text logs, and books focused on correcting systemic historical erasures.</p>
+</article>
+</div>
+<div class="und-shop-layout" style="margin-top:35px">
+<section><h2 class="und-section-title">Browse our bookstore</h2><div class="book-grid-layout" id="book-grid"></div></section>
+<aside aria-label="Shopping cart" class="und-panel und-cart"><h2>Shopping cart</h2><div aria-live="polite" id="cart-items">Loading…</div><div class="und-totals"><span>Subtotal</span><span id="cart-total">R0.00</span></div><p class="und-disclaimer">Digital PDFs; no delivery fee. Payment will be quoted in the configured PayPal checkout currency.</p><a class="btn btn-primary" hidden="" href="checkout.html" id="cart-checkout">Proceed to checkout →</a></aside>
+</div>
+</main>
+<footer>
+<p>Sandile Tukani University © 2026 • Reclaim. Correct. Advance.</p>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/bookstore.js"></script>
 </body>
 </html>
