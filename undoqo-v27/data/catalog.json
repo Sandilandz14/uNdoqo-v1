@@ -1,0 +1,134 @@
+[
+  {
+    "id": "book-001",
+    "title": "Imibengo",
+    "author": "WG Bennie",
+    "format": "PDF",
+    "priceZar": 400,
+    "img": "Imibengo-WG-Bennie.png"
+  },
+  {
+    "id": "book-002",
+    "title": "Olden times in Zululand",
+    "author": "AT Bryant",
+    "format": "PDF",
+    "priceZar": 4000,
+    "img": "olden-times.png"
+  },
+  {
+    "id": "book-003",
+    "title": "Intlalo kaXhosa",
+    "author": "Tiyo Soga",
+    "format": "PDF",
+    "priceZar": 500,
+    "img": "intlalo.png"
+  },
+  {
+    "id": "book-004",
+    "title": "The Record",
+    "author": "Moodie",
+    "format": "PDF",
+    "priceZar": 400,
+    "img": "the-record.jpg"
+  },
+  {
+    "id": "book-005",
+    "title": "South Eastern Bantu",
+    "author": "JH Soga",
+    "format": "PDF",
+    "priceZar": 350,
+    "img": "south-eastern-bantu.jpg"
+  },
+  {
+    "id": "book-006",
+    "title": "Battle at Mamusa",
+    "author": "Piet Erasmus",
+    "format": "PDF",
+    "priceZar": 250,
+    "img": "battle-at-mamusa.jpg"
+  },
+  {
+    "id": "book-007",
+    "title": "History of Basuto",
+    "author": "DF Ellenberger",
+    "format": "PDF",
+    "priceZar": 350,
+    "img": "basuto-ellenberger.png"
+  },
+  {
+    "id": "book-008",
+    "title": "Sonqua",
+    "author": "Pieter Jolly",
+    "format": "PDF",
+    "priceZar": 350,
+    "img": "Sonqua.png"
+  },
+  {
+    "id": "book-009",
+    "title": "History & Ethnography of Africa south of Zambezi before 1795",
+    "author": "GM Theal",
+    "format": "PDF",
+    "priceZar": 500,
+    "img": "before-1795.png"
+  },
+  {
+    "id": "book-010",
+    "title": "The Zulu People As They Were...",
+    "author": "AT Bryant",
+    "format": "PDF",
+    "priceZar": 250,
+    "img": "zulu-before-white-man.png"
+  },
+  {
+    "id": "book-011",
+    "title": "Knowledge & Colonialism: 18th Century travellers in SA",
+    "author": "Brill",
+    "format": "PDF",
+    "priceZar": 400,
+    "img": "knowledge-colonialism.png"
+  },
+  {
+    "id": "book-012",
+    "title": "The Wrongs of the Caffre Nation: A Narrative",
+    "author": "Jusrus",
+    "format": "PDF",
+    "priceZar": 350,
+    "img": "wrongs-of-the-caffre.png"
+  },
+  {
+    "id": "book-013",
+    "title": "Myths and Legends of the Bantu",
+    "author": "Alice Werner",
+    "format": "PDF",
+    "priceZar": 250,
+    "img": "myths-legends.png"
+  },
+  {
+    "id": "book-014",
+    "title": "Memoir respecting the Ntu, Khoe and !Kwi of South Africa",
+    "author": "Lieut-Col. Sutherland",
+    "format": "PDF",
+    "priceZar": 400,
+    "img": "ntu-khwe-kwi.png"
+  },
+  {
+    "id": "book-015",
+    "title": "The Native Races of South Africa",
+    "author": "Stow & Theal",
+    "format": "PDF",
+    "priceZar": 400,
+    "img": "native-races.png"
+  },
+  {
+    "id": "consult-2h",
+    "title": "Focused consultation — 2 hours",
+    "priceZar": 350,
+    "format": "service"
+  },
+  {
+    "id": "consult-3h",
+    "title": "Extended consultation — 3 hours",
+    "priceZar": 500,
+    "format": "service"
+  }
+]

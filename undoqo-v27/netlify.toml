@@ -1,0 +1,27 @@
+
+[build]
+  base = "undoqo-v27"
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/pages/orders-admin.html"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Cache-Control = "no-store"
